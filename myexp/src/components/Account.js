@@ -24,8 +24,10 @@ class AccountPage extends Component {
               if (childData[k].uid == userId) {
                 name = childData[k].username;
                 console.log("name");
+                //var t1 = document.createTextNode(childData[k].username);
+                //document.getElementById("NombrePerfilP").appendChild(t1);
                 document.getElementById("NombrePerfilP").innerHTML = childData[k].username;
-                document.getElementById("nameLow").innerHTML = childData[k].username;
+                //document.getElementById("nameLow").innerHTML = childData[k].username;
                 document.getElementById("emailP").innerHTML = childData[k].email;
                 console.log(name);
                 break;
@@ -40,57 +42,29 @@ class AccountPage extends Component {
   }
   render() {
     return (
-      <div id="profil" style={{ marginLeft: '160px', marginTop: ' 160px' }} >
-        <div className="container" style={{ color: '#a50e72' }}>
+      <section className="intro-section" style={{ marginLeft: '160px' }}>
+        <div className="container" style={{
+          marginLeft: 'auto', textAlign: 'center', color: 'black', backgroundColor: 'whiteSmoke', marginRight: 'auto',
+          marginTop: '100px', width: '450px', height: '250px'
+        }}>
           <div className="row">
-            <div className="col-md-7 ">
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4>Perfil de Usuario</h4>
-                </div>
-                <div className="panel-body">
-                  <div className="box box-info">
-                    <div className="box-body">
+            <div className="col-md-1 col-lg-2"></div>
+            <div className="col-md-10 col-lg-8">
+              <div className="intro">
+                <br />
+                <br />
+                
+                <h2><b>USERNAME:</b></h2>
+                <h2 id="NombrePerfilP"></h2>
+                <h2><b>EMAIL:</b></h2>
+                <h2 id="emailP"></h2>
 
-                      <div className="col-sm-6" style={{ color: '#a50e72' }}>
-                        <h4 id="NombrePerfilP"></h4>
-
-                      </div>
-                      <div className="clearfix"></div>
-                      <hr style={{ margin: '5px 0 5px 0' }} />
-
-
-
-                      <div className="col-sm-5 col-xs-6 tital ">Nombre de Usuario:</div>
-                      <div className="col-sm-7 col-xs-6 ">
-                        <p1 id="nameLow"></p1>
-                      </div>
-                      <div className="clearfix"></div>
-                      <div className="bot-border"></div>
-
-                      <div className="col-sm-5 col-xs-6 tital ">Email:</div>
-                      <div className="col-sm-7">
-                        <p1 id="emailP"></p1>
-                      </div>
-                      <div className="clearfix"></div>
-                      <div className="bot-border"></div>
-
-
-
-
-
-                    </div>
-
-
-                  </div>
-
-                </div>
               </div>
             </div>
-
           </div>
         </div>
-      </div>
+
+      </section>
     );
 
   }
